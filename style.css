@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+i,
+svg {
+  pointer-events: none;
+}
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  height: 5rem;
+  width: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+.kick-pad {
+  background-color: rgb(179, 205, 243);
+}
+.snare-pad {
+  background-color: rgb(253, 186, 244);
+}
+.hihat-pad {
+  background-color: rgb(250, 207, 166);
+}
+.kick-pad.active {
+  background-color: rgb(98, 155, 240);
+}
+.snare-pad.active {
+  background-color: rgb(252, 114, 233);
+}
+.hihat-pad.active {
+  background-color: rgb(245, 158, 76);
+}
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+.sequencer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 1rem;
+}
+.controls h1 {
+  margin-right: 1rem;
+}
+.controls button {
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background-color: rgb(87, 87, 87);
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin-right: 1rem;
+}
+.pad {
+  transition: all 0.5 ease;
+}
+.play {
+  background-color: rgb(88, 88, 88);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+select {
+  padding: 1rem;
+  font-size: 1rem;
+}
+.mute.active {
+  background-color: rgb(182, 182, 182);
+}
+.tempo {
+  margin: 0 auto;
+  width: 30%;
+}
+.tempo p {
+  text-align: center;
+  margin: 2rem;
+  font-size: 1.2rem;
+}
+.tempo-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  background-color: rgb(88, 88, 88);
+  margin-top: 1rem;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.tempo-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+.tempo-slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+.tempo-slider::-ms-thumb {
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
